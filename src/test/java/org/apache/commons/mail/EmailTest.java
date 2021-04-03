@@ -45,6 +45,20 @@ public class EmailTest {
 		assertEquals(3, email.getBccAddresses().size());
 	}
 	
+	@Test
+	public void testaddHeader() throws Exception
+	{
+		email.addHeader("Test Header", "1");
+		
+		if (email.headers == null)
+			throw new EmptyStackException();
+		
+		assertEquals(1, email.headers.size());
+		
+		if (!email.headers.containsKey("Test Header") || !email.headers.containsValue("1"))
+			throw new EmptyStackException();
+	}
+	
 	
 	
 }
