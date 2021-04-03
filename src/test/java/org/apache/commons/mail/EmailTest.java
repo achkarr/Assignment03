@@ -75,6 +75,13 @@ public class EmailTest {
 			throw new EmptyStackException();
 	}
 
+	@Test
+	public void testgetHostName() throws Exception
+	{
+		String HostName = email.getHostName();
+		if (HostName.length() == 0)
+			throw new EmptyStackException();
+	}
 	
 	
 }
