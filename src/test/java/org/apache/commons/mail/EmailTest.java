@@ -108,5 +108,14 @@ public class EmailTest {
 	}
 	
 
+	@Test
+	public void testgetSocketConnectionTimeout() throws Exception
+	{
+		int timeout = email.getSocketConnectionTimeout();
+		if (timeout == 0)
+			throw new EmptyStackException();
+	}
+
+
 	
 }
