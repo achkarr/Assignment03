@@ -83,5 +83,20 @@ public class EmailTest {
 			throw new EmptyStackException();
 	}
 	
+	@Test
+	public void testgetMailSession() throws Exception
+	{
+		javax.mail.Session se = email.getMailSession();
+		
+		if (se.getProperties() == null || se == null)
+			throw new EmptyStackException();
+		
+		
+		assertEquals(email.smtpPort, se.getProperty(EmailConstants.MAIL_PORT));
+		assertEquals(email.hostName, se.getProperty(EmailConstants.MAIL_HOST));
+		assertEquals(String.valueOf(email.debug), se.getProperty(EmailConstants.MAIL_DEBUG));
+	}
+	
+
 	
 }
