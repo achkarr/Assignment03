@@ -98,5 +98,15 @@ public class EmailTest {
 	}
 	
 
+	@Test
+	public void testgetSentDate() throws Exception
+	{
+		Date date = email.getSentDate();
+		
+		if (date == null)
+			throw new EmptyStackException();
+	}
+	
+
 	
 }
