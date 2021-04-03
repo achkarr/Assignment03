@@ -67,5 +67,14 @@ public class EmailTest {
 			throw new EmptyStackException();
 	}
 	
+	@Test
+	public void testbuildMimeMessage() throws Exception
+	{
+		email.buildMimeMessage();
+		if (email.getMimeMessage() == null)
+			throw new EmptyStackException();
+	}
+
+	
 	
 }
