@@ -59,6 +59,13 @@ public class EmailTest {
 			throw new EmptyStackException();
 	}
 	
+	@Test
+	public void testaddReplyTo() throws Exception
+	{
+		email.addReplyTo("test@gmail.com");
+		if (!email.replyList.contains("test@gmail.com"))
+			throw new EmptyStackException();
+	}
 	
 	
 }
