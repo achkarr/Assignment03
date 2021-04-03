@@ -116,6 +116,12 @@ public class EmailTest {
 			throw new EmptyStackException();
 	}
 
-
+	@Test
+	public void testsetFrom() throws Exception
+	{
+		Email em = email.setFrom("test@gmail.com");
+		if(em == null)
+			throw new EmptyStackException();
+	}
 	
 }
